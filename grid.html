@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 1500px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #00FFFF;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #FFE4E1;
+      color: #9370DB;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;} 
+    }
+  </style>
+</head>
+<body>
+ 
+
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h4>BOW  Blog</h4>
+      <ul class="nav nav-pills nav-stacked">
+        <li><a href="http://angsila.cs.buu.ac.th/~58160432/887371/lab03/lab03.html">Home</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160432/887371/lab03/grid.html">การใช้ Grid</a></li>
+        <li><a href="http://angsila.cs.buu.ac.th/~58160432/887371/lab03/form.html">การใช้ Form</a></li>
+      </ul><br>
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Blog..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+     <p>&nbsp;</p>
+<h2><font face="Arial">การสร้าง Grid system</font><font face="Arial"><br />
+</font></h2>
+<p><font face="Arial">1. ในการสร้าง Grid system นั้น Bootstrap แนะนำให้เราสร้างแถวและคอลัมน์ไว้ใน container โดยคลาส container &nbsp;ของ Bootstrap &nbsp;แบ่งออกเป็น 2 ประเภท คือ container และ container-fluid สำหรับ container นั้นจะแสดงผลเนื้อหาตามที่เรากำหนดความกว้างของหน้าจอ ส่วน container-fluid &nbsp;นั้นจะแสดงผลเนื้อหาเต็มความกว้างของหน้าจอของเรา โดยในที่นี้คือเราจะใช้คลาส container&nbsp;</font><font face="Arial"><br />
+</font></p>
+<p style="margin-left: 40px;"><font face="Arial">&lt;div class=&quot;container&quot;&gt; &nbsp; &nbsp; &nbsp;&lt;/div&gt; &nbsp;</font></p>
+<p>&nbsp;</p>
+<p><font face="Arial">2. สร้างแถวโดยใช้ &nbsp;class=&quot;row&quot; ภายใต้ class=&quot;container&quot; โดยเราสามารถที่จะสร้างแถวได้ไม่จำกัด แต่แถวเหล่านั้นต้องอยู่ภายใต้ class=&quot;container&quot;</font><font face="Arial"><br />
+</font></p>
+<p style="margin-left: 40px;"><font face="Arial">&lt;div class=&quot;container&quot;&gt;</font></p>
+<p style="margin-left: 80px;"><font face="Arial">&lt;div class=&quot;row&quot;&gt;&lt;/div&gt;</font></p>
+<p style="margin-left: 40px;"><font face="Arial">&lt;/div&gt;</font></p>
+<p><font face="Arial">3. แต่ละแถวของ Grid system นั้นมีคอลัมน์ในแต่ละแถวได้ 12 คอลัมน์ โดยคอลัมน์ของ Grid system แบ่งออกเป็น 4 ประเภทคือ</font><font face="Arial"><br />
+</font></p>
+<table border="1" class="table table-striped table-hover" style="max-width: 650px; border-collapse: collapse; border-spacing: 0px; width: 869px; margin-bottom: 20px; color: rgb(51, 51, 51); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 28px;">
+    <thead>
+        <tr>
+            <th style="padding: 8px; line-height: 20px; vertical-align: bottom; border-top-width: 0px;">class</th>
+            <th style="padding: 8px; line-height: 20px; vertical-align: bottom; border-top-width: 0px;">ประเภทหน้าจอ</th>
+            <th style="padding: 8px; line-height: 20px; vertical-align: bottom; border-top-width: 0px;">ขนาดหน้าจอ</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221); background-color: rgb(249, 249, 249);">.col-xs-</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221); background-color: rgb(249, 249, 249);">Smart Phone</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221); background-color: rgb(249, 249, 249);">&lt;768px</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221);">.col-sm-</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221);">Tablet</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221);"><span style="color: rgb(34, 34, 34);">&ge;</span>768px</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221); background-color: rgb(249, 249, 249);">.col-md-</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221); background-color: rgb(249, 249, 249);">Desktop ขนาดกลาง</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221); background-color: rgb(249, 249, 249);"><span style="color: rgb(34, 34, 34);">&ge;992</span>px</td>
+        </tr>
+        <tr>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221);">.col-lg-</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221);">Desktop ขนาดใหญ่</td>
+            <td style="padding: 8px; line-height: 20px; vertical-align: top; border-top-width: 1px; border-top-style: solid; border-top-color: rgb(221, 221, 221);"><span style="color: rgb(34, 34, 34);">&ge;1200</span>px</td>
+        </tr>
+    </tbody>
+</table>
+
+      <h4>Leave a Comment:</h4>
+      <form role="form">
+        <div class="form-group">
+          <textarea class="form-control" rows="3" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+      <br><br>
+      
+       <p><span class="badge">2</span> Comments:</p><br>
+      <div class="row">
+        <div class="col-sm-2 text-center">
+          <img src="b.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>love <small>Feb 8, 2017, 9:12 PM</small></h4>
+          <p>เข้าใจเรยคะ</p>
+          <br>
+        </div>
+        <div class="col-sm-2 text-center">
+          <img src="b2.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+        </div>
+        <div class="col-sm-10">
+          <h4>sun <small>Feb 8, 2017, 8:25 PM</small></h4>
+          <p>โอเคเลยคะ</p>
+          <br>
+          <p><span class="badge">1</span> Comment:</p><br>
+          <div class="row">
+            <div class="col-sm-2 text-center">
+              <img src="b1.jpg" class="img-circle" height="65" width="65" alt="Avatar">
+            </div>
+            <div class="col-xs-10">
+              <h4>Rose <small>Feb 9, 2017, 8:28 PM</small></h4>
+              <p>เยี่ยมคะ</p>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>น.ส.ศิริพร  แซ่จึง  58160432</p>
+</footer>
+
+</body>
+</html>
